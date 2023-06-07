@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f7fadb;
+}
+
+/* Component class */
+.componentclass {
+  height: 100vh;
+  width: 100vw;
+  padding: 30px;
+  padding-bottom: 0px;
+  margin: 0;
+  padding-left: 80px;
+
+  gap: 40px;
+}
+.componentclasselement {
+  gap: 70px;
+  display: flex;
+}
+/* Component class */
+
+/* UIclass */
+.mainUiclass {
+  display: flex;
+  flex-direction: column;
+}
+
+.UIclass {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* UIclass */
+
+/* CardClass */
+.cardclass {
+  display: flex;
+  gap: 100px;
+}
+.cardelementclass {
+  background-color: white;
+
+  padding: 15px;
+  padding-top: 4px;
+  box-shadow: 3px 5px 9px 1px rgba(209, 208, 208, 0.856);
+  border-radius: 5px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: -2;
+  position: relative;
+}
+.card-header-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: #404246;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+}
+/* cardClass */
+
+/* iconStyle */
+
+.iconStyle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.iconStyleTrash {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.w-5 {
+  width: 28px;
+}
+.h-5 {
+  height: 28px;
+}
+
+.white-text {
+  color: white;
+}
+
+/* icon style */
+
+svg {
+  height: 80%;
+  width: 80%;
+  border: beige;
+}
+
+.barBox {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 1px;
+}
+/* Navbar */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 20px;
+  background-color: rgba(0, 0, 0, 0.863);
+  padding: 20px;
+  padding-right: 30px;
+  gap: 30px;
+  padding-bottom: 0;
+  position: fixed;
+}
+
+.navbarbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 15px;
+}
+a {
+  text-decoration: none !important;
+}
+
+.nav-slider {
+  height: 100vh;
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0.863);
+  padding: 15px;
+  padding-bottom: 0;
+  padding-top: 15px;
+  left: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-slider span {
+  color: white;
+  padding-top: 0px;
+}
+
+.nav-slider .navbarbox {
+  align-items: flex-start;
+}
+
+/* Table */
+
+.table {
+  border-collapse: collapse;
+  text-align: center;
+  border: none;
+  padding-inline: 20px;
+}
+
+.th {
+  padding: 15px 10px;
+  border-bottom-width: 1px;
+  background-color: #f1f3f5;
+  color: #adb5bd;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.td {
+  padding: 15px 10px;
+}
+
+.text-centre {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.padding-12-10 {
+  padding: 12px 10px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+/* refresh btn */
+
+.refreshbtn {
+  align-items: center;
+  appearance: none;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  /* font-family: "JetBrains Mono", monospace; */
+  height: 30px;
+  justify-content: center;
+  line-height: 0.8;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 15px;
+  margin-bottom: 10px;
+  gap: 5px;
+  z-index: -1;
+}
+
+.refreshbtn:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.refreshbtn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.refreshbtn:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}

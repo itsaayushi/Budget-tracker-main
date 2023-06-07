@@ -1,0 +1,32 @@
+.addBtn:hover {
+  box-shadow: rgba(129, 78, 241, 0.4) 0 4px 8px,
+    rgba(126, 77, 231, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  background-color: #4646f3;
+}
+
+.addBtn {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  padding: 10px 10px;
+  border-radius: 50%;
+  background: #5e5df0;
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  /* font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif; */
+  /* font-size: 16px;
+  font-weight: 700;
+  line-height: 24px; */
+  opacity: 1;
+  outline: 0 solid transparent;
+  /* padding: 8px 18px; */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  /* width: fit-content; */
+  word-break: break-word;
+  border: 0;
+}
