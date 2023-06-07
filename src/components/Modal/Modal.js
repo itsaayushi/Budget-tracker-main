@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
-import "./Modal.css";
-import Response from "data.json";
-import BudgetDataService from "../../services/data.services";
+import React, { useEffect, useState } from 'react';
+import ReactDOM from 'react-dom';
+import './Modal.css';
+import BudgetDataService from '../../services/data.services';
 
 function Modal({ closeModal, setBudgetDataId, id, showModal }) {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
 
-  const [date, setDate] = useState("");
-  const [amount, setAmount] = useState("");
-  const [status, setStatus] = useState("income");
-  const [message, setMessage] = useState({ error: false, msg: "" });
+  const [date, setDate] = useState('');
+  const [amount, setAmount] = useState('');
+  const [status, setStatus] = useState('income');
+  const [message, setMessage] = useState({ error: false, msg: '' });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage("");
-    if (title === "" || amount === "" || date === "") {
-      setMessage({ error: true, msg: "All fields are mandatory!" });
+    setMessage('');
+    if (title === '' || amount === '' || date === '') {
+      setMessage({ error: true, msg: 'All fields are mandatory!' });
 
       return;
     }
@@ -30,26 +29,26 @@ function Modal({ closeModal, setBudgetDataId, id, showModal }) {
 
     try {
       await BudgetDataService.addBudgetData(newBudgetData);
-      setMessage({ error: false, msg: "New Book added successfully!" });
+      setMessage({ error: false, msg: 'New Book added successfully!' });
       window.location.reload();
     } catch (err) {
       setMessage({ error: true, msg: err.message });
     }
 
-    setTitle("");
-    setAmount("");
-    setDate("");
-    setStatus("income");
+    setTitle('');
+    setAmount('');
+    setDate('');
+    setStatus('income');
 
     closeModal();
   };
 
   const editHandler = async () => {
-    setMessage("");
-    console.log("edithandler calleld");
+    setMessage('');
+    console.log('edithandler calleld');
     try {
       const docSnap = await BudgetDataService.getBudgetData(id);
-      console.log("the record inside : ", docSnap.data());
+      console.log('the record inside : ', docSnap.data());
       const selectedBudgetData = docSnap.data();
 
       setTitle(selectedBudgetData.title);
@@ -62,14 +61,14 @@ function Modal({ closeModal, setBudgetDataId, id, showModal }) {
   };
 
   useEffect(() => {
-    document.body.style.overflowY = "hidden";
+    document.body.style.overflowY = 'hidden';
     return () => {
-      document.body.style.overflowY = "scroll";
+      document.body.style.overflowY = 'scroll';
     };
   });
 
   useEffect(() => {
-    console.log("The id here is: ", id);
+    console.log('The id here is: ', id);
     if (id) {
       editHandler();
     }
@@ -94,8 +93,8 @@ function Modal({ closeModal, setBudgetDataId, id, showModal }) {
         <div className="wrapper-content">
           <div className="wrapper-content-box">
             {message?.msg && (
-              <div onClick={() => setMessage("")} style={{ color: "red" }}>
-                {" "}
+              <div onClick={() => setMessage('')} style={{ color: 'red' }}>
+                {' '}
                 {message?.msg}
               </div>
             )}
@@ -158,9 +157,9 @@ function Modal({ closeModal, setBudgetDataId, id, showModal }) {
         </div>
       </>
     ) : (
-      "Loading..."
+      'Loading...'
     ),
-    document.querySelector(".myPortalModalDiv")
+    document.querySelector('.myPortalModalDiv')
   );
 }
 

@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, Outlet } from "react-router-dom";
-import Card from "components/core/Card";
-import Response from "data.json";
-import Table from "../core/Table";
-import Button from "components/Button/Button";
-import BudgetDataService from "../../services/data.services";
+import React, { useState, useEffect } from 'react';
+import Card from 'components/core/Card';
+import Table from '../core/Table';
+import Button from 'components/Button/Button';
+import BudgetDataService from '../../services/data.services';
 
 export default function Income({ getBudgetDataId, setBudgetDataId, id }) {
   const [BudgetData, setBudgetData] = useState([]);
@@ -18,7 +16,7 @@ export default function Income({ getBudgetDataId, setBudgetDataId, id }) {
   };
 
   const IncomeArray = BudgetData.filter(function (el) {
-    return el.status === "income";
+    return el.status === 'income';
   });
 
   var total = 0;
@@ -38,25 +36,25 @@ export default function Income({ getBudgetDataId, setBudgetDataId, id }) {
           {[
             {
               total: IncomeArray.length,
-              header: "Total Income Source",
+              header: 'Total Income Source',
               iscurrency: false,
-              icon: "Income",
+              icon: 'Income',
               isIcon: false,
-              iconColor: "#69db7c",
+              iconColor: '#69db7c',
             },
             {
               total: TOTAL_INCOME.toFixed(),
-              header: "Total Amount",
+              header: 'Total Amount',
               iscurrency: true,
-              icon: "Income",
+              icon: 'Income',
               isIcon: false,
-              iconColor: "#fa5252",
+              iconColor: '#fa5252',
             },
           ].map((item) => {
             return (
               <Card
                 {...item}
-                iconClasses={""}
+                iconClasses={''}
                 headerTextClass="card-header-text"
                 className="padding-12-10"
               />
@@ -67,10 +65,10 @@ export default function Income({ getBudgetDataId, setBudgetDataId, id }) {
           <div className="mt-20">
             <Table
               headers={[
-                { label: "Title", key: "title", class: "text-left" },
-                { label: "Date", key: "date", class: "text-centre" },
-                { label: "Amount", key: "amount", class: "text-centre" },
-                { label: "Status", key: "status", class: "text-centre" },
+                { label: 'Title', key: 'title', class: 'text-left' },
+                { label: 'Date', key: 'date', class: 'text-centre' },
+                { label: 'Amount', key: 'amount', class: 'text-centre' },
+                { label: 'Status', key: 'status', class: 'text-centre' },
               ]}
               income
               getBudgetDataId={getBudgetDataId}

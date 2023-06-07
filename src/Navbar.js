@@ -1,8 +1,8 @@
-import Icon from "components/core/Icon";
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
-import NavSlider from "components/core/NavSlider";
+import Icon from 'components/core/Icon';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import NavSlider from 'components/core/NavSlider';
 
 export default function Navbar() {
   const [slider, setSlider] = useState(false);
@@ -31,17 +31,17 @@ export default function Navbar() {
           onMouseEnter={(e) => ShowSlider(e)}
           onMouseLeave={(e) => HideSlider(e)}
         >
-          <Icon className={"white-text w-5 h-5"} name="Menu" />
+          <Icon className={'white-text w-5 h-5'} name="Menu" />
         </NavLink>
 
         <NavLink to="/" onClick={() => HideSlider()}>
-          <Icon className={"white-text w-5 h-5"} name="Overview" />
+          <Icon className={'white-text w-5 h-5'} name="Overview" />
         </NavLink>
         <NavLink to="/Income" onClick={() => HideSlider()}>
-          <Icon className={"white-text w-5 h-5"} name="Income" />
+          <Icon className={'white-text w-5 h-5'} name="Income" />
         </NavLink>
         <NavLink to="/expenses" onClick={() => HideSlider()}>
-          <Icon className={"white-text w-5 h-5"} name="Expense" />
+          <Icon className={'white-text w-5 h-5'} name="Expense" />
         </NavLink>
       </nav>
       {slider ? <NavSlider HideSlider={HideSlider} /> : null}

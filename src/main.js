@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import Table from "./components/core/Table";
-import Response from "./data.json";
-import Card from "components/core/Card";
-import BudgetDataService from "./services/data.services";
+import Table from './components/core/Table';
+import Card from 'components/core/Card';
+import BudgetDataService from './services/data.services';
 
-import Icon from "components/core/Icon";
 
 export default function Main() {
   const [BudgetData, setBudgetData] = useState([]);
@@ -20,13 +18,13 @@ export default function Main() {
   };
 
   const IncomeArray = BudgetData.filter(function (el) {
-    return el.status === "income";
+    return el.status === 'income';
   });
 
   console.log(IncomeArray);
 
   const ExpenseArray = BudgetData.filter(function (el) {
-    return el.status === "expense";
+    return el.status === 'expense';
   });
 
   var total = 0;
@@ -55,33 +53,33 @@ export default function Main() {
         {[
           {
             total: TOTAL_INCOME.toFixed(),
-            header: "Total Income",
+            header: 'Total Income',
             iscurrency: true,
-            icon: "Income",
+            icon: 'Income',
             isIcon: true,
-            iconColor: "#69db7c",
+            iconColor: '#69db7c',
           },
           {
             total: TOTAL_EXPENSE.toFixed(),
-            header: "Total Expense",
+            header: 'Total Expense',
             iscurrency: true,
-            icon: "Expense",
+            icon: 'Expense',
             isIcon: true,
-            iconColor: "#fa5252",
+            iconColor: '#fa5252',
           },
           {
             total: Available_Balance.toFixed(),
-            header: "Available Balance",
+            header: 'Available Balance',
             iscurrency: true,
-            icon: "AvailableBalance",
+            icon: 'AvailableBalance',
             isIcon: true,
-            iconColor: "#862e9c",
+            iconColor: '#862e9c',
           },
         ].map((item) => {
           return (
             <Card
               {...item}
-              iconClasses={""}
+              iconClasses={''}
               headerTextClass="card-header-text"
               className="padding-12-10"
             />
@@ -93,10 +91,10 @@ export default function Main() {
         <div className="mt-20">
           <Table
             headers={[
-              { label: "Title", key: "title", class: "text-left" },
-              { label: "Date", key: "date", class: "text-centre" },
-              { label: "Amount", key: "amount", class: "text-centre" },
-              { label: "Status", key: "status", class: "text-centre" },
+              { label: 'Title', key: 'title', class: 'text-left' },
+              { label: 'Date', key: 'date', class: 'text-centre' },
+              { label: 'Amount', key: 'amount', class: 'text-centre' },
+              { label: 'Status', key: 'status', class: 'text-centre' },
             ]}
           />
         </div>

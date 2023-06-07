@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./Button.css";
-import { Plus } from "react-feather";
-import Modal from "../Modal/Modal";
+import React, { useState } from 'react';
+import './Button.css';
+import { Plus } from 'react-feather';
+import Modal from '../Modal/Modal';
 
 export default function Button(props) {
   const [showModal, setShowModal] = useState(false);

@@ -1,4 +1,4 @@
-import { getIconComponent } from "./helper";
+import { getIconComponent } from './helper';
 
 function Icon({ name, className }) {
   const IconComponent = getIconComponent(name);

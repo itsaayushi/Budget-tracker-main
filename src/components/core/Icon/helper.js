@@ -1,4 +1,4 @@
-import Icons from "assets/icons";
+import Icons from 'assets/icons';
 export const ICON_MAP = {
   AvailableBalance: () => Icons.AvalaibleBalance,
   Overview: () => Icons.OverviewIcon,
@@ -7,7 +7,7 @@ export const ICON_MAP = {
   Menu: () => Icons.MenuIcon,
   Money: () => Icons.MoneyIcon,
   Trash: () => Icons.TrashIcon,
-  Refresh: () => Icons.RefreshIcon
+  Refresh: () => Icons.RefreshIcon,
 };
 export const getIconComponent = (name) => {
   const applyMapper = ICON_MAP[name];

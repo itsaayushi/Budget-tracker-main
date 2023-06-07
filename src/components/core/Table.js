@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import BudgetDataService from "../../services/data.services";
-import Icon from "components/core/Icon";
+import React, { useEffect, useState } from 'react';
+import BudgetDataService from '../../services/data.services';
+import Icon from 'components/core/Icon';
 
-export default function Table({ headers, income, expense, getBudgetDataId }) {
+export default function Table({ headers, income, expense }) {
   const [BudgetData, setBudgetData] = useState([]);
   useEffect(() => {
     getBudgetData();
@@ -17,13 +17,13 @@ export default function Table({ headers, income, expense, getBudgetDataId }) {
     getBudgetData();
   }, []);
   const IncomeArray = BudgetData.filter(function (el) {
-    return el.status === "income";
+    return el.status === 'income';
   });
 
   console.log(IncomeArray);
 
   const ExpenseArray = BudgetData.filter(function (el) {
-    return el.status === "expense";
+    return el.status === 'expense';
   });
 
   let CurrentBudgetData = [];
@@ -52,7 +52,7 @@ export default function Table({ headers, income, expense, getBudgetDataId }) {
         </thead>
 
         <tbody>
-          {CurrentBudgetData?.map((singleObj, index) => (
+          {CurrentBudgetData?.map((singleObj) => (
             <tr key={singleObj.id}>
               {headers?.map((headerobj) => (
                 <td className={`td ${headerobj.class}`}>
@@ -61,16 +61,16 @@ export default function Table({ headers, income, expense, getBudgetDataId }) {
               ))}
               <td>
                 <button
-                  onClick={(e) => deleteHandler(singleObj.id)}
+                  onClick={() => deleteHandler(singleObj.id)}
                   style={{
-                    border: "none",
+                    border: 'none',
                   }}
                 >
                   <span
                     className={`w-5 h-5 iconStyleTrash`}
                     style={{
-                      backgroundColor: "#0000001A",
-                      color: "#000000",
+                      backgroundColor: '#0000001A',
+                      color: '#000000',
                     }}
                   >
                     <Icon name="Trash" />

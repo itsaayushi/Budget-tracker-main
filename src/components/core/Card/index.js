@@ -1,5 +1,5 @@
-import React from "react";
-import Icon from "components/core/Icon";
+import React from 'react';
+import Icon from 'components/core/Icon';
 
 export default function Card({
   total,
@@ -8,7 +8,7 @@ export default function Card({
   iscurrency = false,
   icon,
   iconClasses,
-  iconColor = "#232323",
+  iconColor = '#232323',
   headerTextClass,
   className,
 }) {
@@ -20,7 +20,7 @@ export default function Card({
       </div>
 
       <div>
-        {" "}
+        {' '}
         {isIcon ? (
           <span
             className={`w-5 h-5 iconStyle ${iconClasses}`}

@@ -1,19 +1,18 @@
-import { NavLink } from "react-router-dom";
-import Icon from "components/core/Icon";
+import { NavLink } from 'react-router-dom';
 
 export default function NavSlider(props) {
   return (
     <div className="nav-slider" onMouseLeave={(e) => props.HideSlider(e)}>
       <nav className="navbarbox">
         <NavLink to="/" onClick={() => props.HideSlider()}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <span
               style={{
-                paddingTop: "8px",
+                paddingTop: '8px',
                 marginBottom: 0,
               }}
             >
-              {" "}
+              {' '}
               Expense Tracker
             </span>
           </div>
@@ -21,14 +20,14 @@ export default function NavSlider(props) {
 
         {/* overview */}
         <NavLink
-          style={{ textDecoration: "none" }}
+          style={{ textDecoration: 'none' }}
           to="/"
           onClick={() => props.HideSlider()}
         >
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <span
               style={{
-                paddingTop: "8px",
+                paddingTop: '8px',
                 marginBottom: 0,
               }}
             >
@@ -39,10 +38,10 @@ export default function NavSlider(props) {
 
         {/* income  */}
         <NavLink to="/Income" onClick={() => props.HideSlider()}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <span
               style={{
-                paddingTop: "9px",
+                paddingTop: '9px',
                 marginBottom: 0,
               }}
             >
@@ -53,10 +52,10 @@ export default function NavSlider(props) {
 
         {/* expense */}
         <NavLink to="/expenses" onClick={() => props.HideSlider()}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <span
               style={{
-                paddingTop: "9px",
+                paddingTop: '9px',
                 marginBottom: 0,
               }}
             >
