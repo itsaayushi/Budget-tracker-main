@@ -19,10 +19,6 @@ export default function Navbar() {
       return setSlider(false);
   }
 
-  function HideOnClick() {
-    return setSlider(false);
-  }
-
   return (
     <div className="navbar" onMouseLeave={(e) => HideSlider(e)}>
       <nav className="navbarbox">
